@@ -1,0 +1,3 @@
+faketime:
+  libraryPath: '/libfaketime/lib/faketime/libfaketime.so.1'
+  mountPath: '/libfaketime/'
