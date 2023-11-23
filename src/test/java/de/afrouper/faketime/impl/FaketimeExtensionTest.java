@@ -41,11 +41,16 @@ class FaketimeExtensionTest {
 
     @Test
     public void deploymentTest() throws Exception {
+        //TODO: Build proper deployment
         Deployment deployment = new DeploymentBuilder()
                 .editMetadata()
                 .withName("Test-Deployment")
                 .addToLabels("de.afrouper.useFaketime", "true")
                 .endMetadata()
+                .editOrNewSpec()
+                .editOrNewTemplate()
+                .endTemplate()
+                .endSpec()
                 .build();
 
         client.resource(deployment).create();
