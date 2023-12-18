@@ -36,7 +36,7 @@ jobs:
           PREFIX=libfaketime/ make install
 
       - name: 'Upload library'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: libfaketime
           path: |
@@ -73,7 +73,7 @@ jobs:
         run: mv target/faketime-operator-1.0.0-runner target/faketime-operator-runner
 
       - name: 'Upload binary'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: binary
           path: |
